@@ -13,7 +13,11 @@ group :test do
   gem 'capybara', '2.2.0'
   gem 'rspec-rails', '3.3.2'
   gem 'test-unit'
-  gem 'guard-rspec','4.6.0'
+  gem 'guard-rspec'
+  gem 'spork', github: 'sporkrb/spork'
+  gem 'spork-rails'
+  gem 'guard-spork'
+  gem 'childprocess'
 end
 
 gem 'sass-rails', '4.0.1'
