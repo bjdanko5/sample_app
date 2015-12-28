@@ -28,7 +28,8 @@ guard 'spork', :cucumber_env => { 'RAILS_ENV' => 'test' },
   watch('test/test_helper.rb') { :test_unit }
   watch(%r{features/support/}) { :cucumber }
 end
-guard 'rspec', all_after_pass: false, cmd: '--drb'  do
+ENV['GUARD_RSPEC_RESULTS_FILE'] = 'tmp/results.txt'
+guard 'rspec', all_after_pass: false, cmd: 'rspec',results_file: 'tmp/results.txt'   do
  
   watch('config/routes.rb')
   # Custom Rails Tutorial specs
