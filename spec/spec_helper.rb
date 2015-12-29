@@ -1,3 +1,4 @@
+include Rails.application.routes.url_helpers
 require 'rubygems'
 require 'spork'
 #uncomment the following line to use spork with the debugger
