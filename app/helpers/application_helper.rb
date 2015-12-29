@@ -19,6 +19,9 @@ module ApplicationHelper
   def get_test_path
    Rails.application.routes.url_helpers.test_path
   end
+  def get_signup_path
+   Rails.application.routes.url_helpers.signup_path
+  end
   def full_title(page_title)
     base_title = "Ruby on Rails Tutorial Sample App"
     if page_title.empty?
