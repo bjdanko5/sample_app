@@ -1,7 +1,12 @@
 #SampleApp.routes.draw do
+  #get 'users/new'
+
 #SampleApp::Application.routes.draw do
-include Rails.application.routes.url_helpers
+  #get 'users/new'
+
 Rails.application.routes.draw do
+  get 'users/new'
+
 #  get 'static_pages/home'
 #  get 'static_pages/help'
 #  get "static_pages/about"
