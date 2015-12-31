@@ -20,7 +20,7 @@ group :test do
   gem 'guard-spork'
   gem 'childprocess'
 end
-
+gem 'bcrypt-ruby'
 #gem 'sass-rails', '4.0.1'
 gem 'sass-rails', '~> 4.0.2'
 gem 'uglifier', '2.1.1'
