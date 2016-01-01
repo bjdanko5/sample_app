@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.2.1'
 #ruby-gemset=railstutorial_rails_4_0
 
-gem 'rails', '4.1.9'
+gem 'rails', '4.1.8'
 #'4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
 group :development, :test do
@@ -19,6 +19,7 @@ group :test do
   gem 'spork-rails'
   gem 'guard-spork'
   gem 'childprocess'
+  gem 'factory_girl_rails', '4.2.1'
 end
 gem 'bcrypt-ruby'
 #gem 'sass-rails', '4.0.1'
