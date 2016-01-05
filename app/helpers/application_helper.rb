@@ -28,6 +28,9 @@ module ApplicationHelper
   def get_user_path(user)
    Rails.application.routes.url_helpers.user_path(user)
   end
+  def get_edit_user_path(user)
+   Rails.application.routes.url_helpers.edit_user_path(user)
+  end
   def get_signin_path
   Rails.application.routes.url_helpers.signin_path
   end 
@@ -36,6 +39,9 @@ module ApplicationHelper
   end 
   def get_users_path(user)
    Rails.application.routes.url_helpers.users_path(user)
+  end
+   def get_users_index_path
+   Rails.application.routes.url_helpers.users_path
   end
    def get_sessions_path
    Rails.application.routes.url_helpers.sessions_path

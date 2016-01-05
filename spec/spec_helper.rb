@@ -41,10 +41,9 @@ Spork.prefork do
 # These instructions should self-destruct in 10 seconds.  If they don't, feel
 # free to delete them.
 
-
-
-
 # This file is copied to spec/ when you run 'rails generate rspec:install'
+Capybara.app_host = 'http://ruby-bjdanko5.c9users.io'
+#default_url_options[:host] = 'http://ruby-bjdanko5.c9users.io'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
