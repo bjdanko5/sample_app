@@ -25,9 +25,20 @@ module ApplicationHelper
   def get_user_path
    Rails.application.routes.url_helpers.user_path
   end
- 
+  def get_user_path(user)
+   Rails.application.routes.url_helpers.user_path(user)
+  end
+  def get_signin_path
+  Rails.application.routes.url_helpers.signin_path
+  end 
+   def get_signout_path
+  Rails.application.routes.url_helpers.signout_path
+  end 
   def get_users_path(user)
    Rails.application.routes.url_helpers.users_path(user)
+  end
+   def get_sessions_path
+   Rails.application.routes.url_helpers.sessions_path
   end
   def full_title(page_title)
     base_title = "Ruby on Rails Tutorial Sample App"

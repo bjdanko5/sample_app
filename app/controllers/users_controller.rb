@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params) 
      if @user.save
       # Handle a successful save.
+      flash[:success] = "Welcome to the Sample App!"
       redirect_to Rails.application.routes.url_helpers.user_path(@user)
       #redirect_to get_user_path(@user)
     else

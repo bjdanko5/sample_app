@@ -20,6 +20,7 @@ group :test do
   gem 'guard-spork'
   gem 'childprocess'
   gem 'factory_girl_rails', '4.2.1'
+  gem 'rspec-its'
 end
 gem 'bcrypt-ruby'
 #gem 'sass-rails', '4.0.1'
