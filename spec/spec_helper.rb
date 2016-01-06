@@ -7,11 +7,6 @@ Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However,
   # if you change any configuration or code from libraries loaded here, you'll
   # need to restart spork for it take effect.
-
-
-
-
-
 # --- Instructions ---
 # Sort the contents of this file into a Spork.prefork and a Spork.each_run
 # block.
@@ -44,10 +39,12 @@ Spork.prefork do
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 Capybara.app_host = 'http://ruby-bjdanko5.c9users.io'
 #default_url_options[:host] = 'http://ruby-bjdanko5.c9users.io'
+include Rails.application.routes.url_helpers
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/its'
+
 #require 'rspec/autorun'
 
 # Requires supporting ruby files with custom matchers and macros, etc,

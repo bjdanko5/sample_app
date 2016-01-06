@@ -79,5 +79,21 @@ describe "Authentication" do
         end
       end
     end
+    ##############
+        describe "as non-admin user" do
+      let(:user) { FactoryGirl.create(:user) }
+      let(:non_admin) { FactoryGirl.create(:user) }
+
+      before { sign_in non_admin, no_capybara: true }
+
+      describe "submitting a DELETE request to the Users#destroy action" do
+        before {
+          host!('ruby-bjdanko5.c9users.io')
+          delete user_path(user) }
+       
+        specify { expect(response).to redirect_to(signin_url) }
+      end
+    end
+    ##############
   end
 end
