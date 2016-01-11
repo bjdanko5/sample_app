@@ -1,4 +1,6 @@
+
 include ApplicationHelper
+
 Rails.application.routes.default_url_options[:host] = 'ruby-bjdanko5.c9users.io'
 #def full_title(page_title)
 #  base_title = "Ruby on Rails Tutorial Sample App"
@@ -12,7 +14,7 @@ def sign_in(user, options={})
   if options[:no_capybara]
     # Sign in when not using Capybara.
     remember_token = User.new_remember_token
-    cookies[:remember_token] = remember_token
+    request.cookies['remember_token'] = remember_token
     user.update_attribute(:remember_token, User.encrypt(remember_token))
   else
     visit signin_path

@@ -57,6 +57,7 @@ ActiveRecord::Migration.maintain_test_schema!
 #ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
+   #config.infer_spec_type_from_file_location!
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
@@ -84,7 +85,7 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
   config.include Capybara::DSL
- 
+  config.include ActionController::TestCase::Behavior
 end
 end
 Spork.each_run do

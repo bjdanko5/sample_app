@@ -17,7 +17,7 @@ end
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.2.0'
-  gem 'rspec-rails' , '3.1'
+  gem 'rspec-rails' 
   gem 'test-unit'
   gem 'guard-rspec'
   gem 'spork', github: 'sporkrb/spork'
